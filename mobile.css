@@ -6,7 +6,18 @@
         align-items: center;
     }
 
+    .tody {
+        display: none;
+    }
+
     .categorie-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+    .categorie-area .categories {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -15,7 +26,13 @@
     .user-infos .infos {
         display: none;
     }
-    
+
+    .search-box form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .search-box #search-input {
         display: none;
     }
