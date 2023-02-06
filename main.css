@@ -301,6 +301,15 @@ body.purple {
     filter: var(--settings-icon-color);
 }
 
+.icons img {
+    margin: 5px;
+    filter: var(--settings-icon-color);
+}
+
+.icons img:first-child {
+    margin: 0px 20px;
+}
+
 .settings-area {
     width: 300px;
     position: absolute;
