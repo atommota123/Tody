@@ -108,36 +108,6 @@ body.purple {
     background-color: var(--main-content-bg);
 }
 
-
-.user-infos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 85%;
-    
-}
-
-/* .user-infos img {
-} */
-
-.user-infos .infos {
-    color: var(--user-infos-text-color);
-    font-size: 1.2vw;
-    margin-left: 15px;
-}
-
-
-#name {
-    font-size: 1em;
-    font-weight: 500;
-    
-}
-
-#mail {
-    font-size: 0.8em;
-    opacity: 66%;
-}
-
 .search-box {
     margin-top: 30px;
     display: flex;
