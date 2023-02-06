@@ -13,6 +13,7 @@ const specificTodosCount = document.querySelector("#specific-todos-count")
 
 document.addEventListener("DOMContentLoaded", e => {
     loadTodos()
+    getDate()
     
     if(!localStorage.getItem("theme")) {
         document.body.className = "dark"
@@ -215,4 +216,44 @@ function changeTheme(e) {
     document.body.className = theme
 
     localStorage.setItem("theme", theme)
+}
+
+function getDate() {
+    const dateText = document.querySelector("#date")
+    const now = new Date()
+
+    const day = now.getDay()
+    const month = now.getMonth()
+    const date = now.getDate()
+
+    console.log(day, month, date)
+
+    const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+    ]
+
+
+    const days = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+    ]
+
+    dateText.innerHTML = `${days[day]}, ${months[month]} ${date}`
+
 }
