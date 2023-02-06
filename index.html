@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mobile.css">
+    <!-- <link rel="stylesheet" id="theme-style-file" href="theme-dark-white.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+</head>
+
+<body class="dark">
+
+
+    <div class="dashboard">
+        <div class="user-infos">
+            <img src="profile.jpg" style="border-radius: 100%; width: 3vw;" alt="profile-image">
+            <div class="infos">
+                <p id="name">Hasan Çelikoğlu</p>
+                <p id="mail">hasancelikoglu92@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="search-box">
+
+            <form action="">
+                <img src="./icons/search-outline.svg" width="40px" id="search-icon">
+                <input type="search" name="search-input" id="search-input" placeholder="Search...">
+
+            </form>
+        </div>
+
+        <div class="categorie-area">
+            <div class="categories">
+                <div class="name-n-icon">
+                    <img src="./icons/sunny.svg" id="today-icon" class="categorie-icons" alt="today-icon">
+                    <p class="categorie-name">Today</p>
+                </div>
+                <p class="todo-count" id="today-todos-count"></p>
+            </div>
+            <div class="categories">
+                <div class="name-n-icon">
+                    <img src="./icons/star.svg" id="important-icon" class="categorie-icons" alt="important-icon">
+                    <p class="categorie-name">Important</p>
+                </div>
+                <p class="todo-count" id="important-todos-count"></p>
+            </div>
+            <div class="categories">
+                <div class="name-n-icon">
+                    <img src="./icons/build.svg" id="specific-icon" class="categorie-icons" alt="specific-icon">
+                    <p class="categorie-name" id="specific-todos-count">Specific</p>
+                </div>
+                <p class="todo-count"></p>
+            </div>
+        </div>
+
+        <div id="border"></div>
+
+        <div class="new-list">
+            <img src="./icons/add-outline.svg" id="add-icon" width="40px">
+            <p style="padding: 10px;">New List</p>
+        </div>
+    </div>
+
+
+
+
+    <div class="main-content">
+        <div class="categorie-title">
+            <div class="categorie-content-title">
+                <div class="name">
+                    <h1 id="title">TODAY</h1>
+                    <div id="vector"></div>
+                </div>
+                <p id="date">Thursday, February 2</p>
+            </div>
+
+            
+
+            <img src="./icons/settings.svg" style="cursor: pointer;" id="settings-icon" width="30px" alt="">
+
+            <div class="settings-area" style="display: block;">
+                <p class="theme dark">Dark</p>
+                <p class="theme dark-white">Dark-white</p>
+                <p class="theme light">Light</p>
+                <p class="theme purple">Purple</p>
+            </div>
+        </div>
+
+
+        <div class="todos-area">
+            <div class="pending-todos">
+                <ul class="todo-list">
+                    
+                    <!-- <li class="todos">
+                        <div style="display: flex;">
+                            <input type="checkbox" title="important" class="check" id="deneme">
+                        
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            
+                        </div>
+
+                        <div class="functions">
+                            <img src="./icons/star-outline.svg" title="important" class="make-important" alt="">
+                            <img src="./icons/trash-outline.svg" class="trash" alt="">
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+
+
+
+
+            <div class="completed-todos">
+                <p id="title" class="completed-title" style="display: block;">Completed ✅</p>
+
+
+                <ul class="todo-list">
+                    
+                    <!-- <li class="todos completed">
+                        <div style="display: flex;">
+                            <input type="checkbox" class="check" checked="checked" id="deneme">
+                        
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            
+                        </div>
+                        <img src="./icons/star-outline.svg" title="important" class="make-important" alt="">
+
+
+                        
+                    
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div class="add-task">
+            <form action="" id="add-task-form">
+                <img src="./icons/add-outline.svg" id="add-task-icon" height="50px">
+                <input type="text" name="add-input" id="add-input" placeholder="Add task...">
+            </form>
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
