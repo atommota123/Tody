@@ -38,27 +38,30 @@
         </div>
 
         <div class="categorie-area">
-            <div class="categories">
+            <div class="categories" data-categorie="today" id="today">
                 <div class="name-n-icon">
                     <img src="./icons/sunny.svg" id="today-icon" class="categorie-icons" alt="today-icon">
-                    <p class="categorie-name">Today</p>
+                    <p class="categorie-name" id="today-text">Today</p>
                 </div>
                 <p class="todo-count" id="today-todos-count"></p>
             </div>
-            <div class="categories">
+
+            <div class="categories" data-categorie="important" id="important">
                 <div class="name-n-icon">
                     <img src="./icons/star.svg" id="important-icon" class="categorie-icons" alt="important-icon">
-                    <p class="categorie-name">Important</p>
+                    <p class="categorie-name" id="important-text">Important</p>
                 </div>
                 <p class="todo-count" id="important-todos-count"></p>
             </div>
-            <div class="categories">
+
+            <!-- <div class="categories" data-categorie="specific" id="specific">
                 <div class="name-n-icon">
                     <img src="./icons/build.svg" id="specific-icon" class="categorie-icons" alt="specific-icon">
-                    <p class="categorie-name" id="specific-todos-count">Specific</p>
+                    <p class="categorie-name">Specific</p>
                 </div>
-                <p class="todo-count"></p>
-            </div>
+                <p class="todo-count" id="specific-todos-count"></p>
+            </div> -->
+
         </div>
 
         <div id="border"></div>
@@ -156,7 +159,11 @@
     </div>
 
 
-    <script src="app.js"></script>
+    <script src="ui.js"></script>
+    <script src="storage.js"></script>
+    <script src="todo.js"></script>
+    
+    <script src="main.js"></script>
 </body>
 
 </html>

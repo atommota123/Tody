@@ -22,7 +22,7 @@ html, body {
 
 
     --categorie-name-color: #838383;
-    --categorie-icons-colors: invert(72%) sepia(3%) saturate(294%) hue-rotate(11deg) brightness(88%) contrast(90%);
+    /* --categorie-icons-colors: invert(72%) sepia(3%) saturate(294%) hue-rotate(11deg) brightness(88%) contrast(90%); */
     --todo-count-color: #838383;
     --border-color: #838383;
     
@@ -35,6 +35,12 @@ html, body {
     --completed-text-color: #000;
 
     --add-task-bg: #393939;
+
+    --today-icon-color: invert(75%) sepia(4%) saturate(234%) hue-rotate(11deg) brightness(84%) contrast(94%);
+    --important-icon-color: invert(75%) sepia(4%) saturate(234%) hue-rotate(11deg) brightness(84%) contrast(94%);
+
+    /* --selected-text-color: #282828;
+    --selected-icon-color: invert(14%) sepia(0%) saturate(1056%) hue-rotate(135deg) brightness(96%) contrast(94%); */
 
 }
 
@@ -53,6 +59,8 @@ body.dark {
     --todo-name-color: #DADADA;
     --completed-text-color: #DADADA;
     --settings-icon-color: invert(94%) sepia(2%) saturate(4%) hue-rotate(357deg) brightness(90%) contrast(100%);
+    
+    
 }
 
 body.light {
@@ -69,6 +77,13 @@ body.light {
     --border-color: #72716D;
     
     --new-list-color: #72716D;
+
+    --important-icon-color: invert(66%) sepia(54%) saturate(2542%) hue-rotate(317deg) brightness(95%) contrast(93%);
+    --today-icon-color: invert(77%) sepia(42%) saturate(4126%) hue-rotate(9deg) brightness(109%) contrast(100%);
+
+    /* --selected-text-color: #000;
+    --selected-icon-color: invert(0%) sepia(90%) saturate(2522%) hue-rotate(215deg) brightness(101%) contrast(108%); */
+
 }
 
 body.purple {
@@ -86,6 +101,13 @@ body.purple {
     --border-color: #ECECEC;
     
     --new-list-color: #ECECEC;
+
+    --today-icon-color: invert(66%) sepia(54%) saturate(2542%) hue-rotate(317deg) brightness(95%) contrast(93%);
+    --important-icon-color: invert(77%) sepia(42%) saturate(4126%) hue-rotate(9deg) brightness(109%) contrast(100%);
+
+    /* --selected-text-color: #000;
+    --selected-icon-color: invert(0%) sepia(90%) saturate(2522%) hue-rotate(215deg) brightness(101%) contrast(108%); */
+    
 }
 
 .dashboard, .main-content {
@@ -101,11 +123,13 @@ body.purple {
     flex-direction: column;
     align-items: center;
     background-color: var(--dashboard-bg);
+    min-height: 100%;
 }
 
 .main-content {
     width: 100%;
     background-color: var(--main-content-bg);
+    min-height: 100%;
 }
 
 .search-box {
@@ -153,9 +177,24 @@ body.purple {
 .categorie-area .categories {
     display: flex;
     align-items: center;
-    width: 80%;
+    width: 100%;
     justify-content: space-between;
-    padding: 18px 0px;
+    padding: 15px 30px;
+}
+
+
+.categorie-area .categories * {
+    pointer-events: none;
+}
+
+
+.categorie-area .categories:hover {
+    cursor: pointer;
+    background-color: var(--);
+}
+
+.categories:hover + .name-n-icon p {
+    color: aqua;
 }
 
 
@@ -177,15 +216,15 @@ body.purple {
     color: var(--todo-count-color);
 }
 
-/* #today-icon {
-    filter: invert(64%) sepia(43%) saturate(3189%) hue-rotate(298deg) brightness(93%) contrast(83%);
+#today-icon {
+    filter: var(--today-icon-color);
 }
 
 #important-icon {
-    filter: invert(57%) sepia(78%) saturate(580%) hue-rotate(12deg) brightness(111%) contrast(106%);
+    filter: var(--important-icon-color);
 }
 
-#specific-icon {
+/* #specific-icon {
     filter: invert(98%) sepia(3%) saturate(64%) hue-rotate(173deg) brightness(110%) contrast(74%);
 } */
 
@@ -363,9 +402,9 @@ body.purple {
 .add-task {
     margin-top: 30px;
     display: flex;
-    width: 74%;
     justify-content: center;
     bottom: 20px;
+    width: 75.3vw;
     position: fixed;
 }
 
@@ -420,4 +459,8 @@ body.purple {
     cursor: pointer;
     background-color: white;
     color: black;
+}
+
+.selected {
+    background-color: #E8E8E6;
 }
