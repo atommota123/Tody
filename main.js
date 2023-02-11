@@ -13,6 +13,7 @@ const categories = document.querySelectorAll(".categories")
 const searchInput = document.querySelector("#search-input")
 
 
+
 eventListeners()
 
 function eventListeners() {
@@ -21,6 +22,7 @@ function eventListeners() {
         UI.updateCounters()
         UI.updateCompletedTitle()
         UI.loadTheme()
+        updateDate()
     })
     form.addEventListener("submit", addTodo)
 
@@ -140,4 +142,41 @@ function changeShowingTodos(categorieName) {
 
 function searchTodo(e) {
     UI.filterTodos(searchInput.value)
+}
+
+function updateDate() {
+    const dateText = document.querySelector("#date")
+    const now = new Date()
+
+    const day = now.getDay()
+    const month = now.getMonth()
+    const date = now.getDate()
+
+    const months = [
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+    ]
+
+
+    const days = [
+        'Sunday',
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+    ]
+    
+    dateText.innerHTML = `${days[day]}, ${months[month]} ${date}`
 }
